@@ -1,0 +1,24 @@
+
+#homepage{
+    background-image: url(assets/flowerBackground1.jpg);
+    height: 650px;
+    position: relative;
+}
+#home-section{
+    position: absolute;
+    top: 250px;
+    right: 40px; 
+}
+#home-btn{
+    margin-left: 100px;
+}
+.home-text{
+    max-width: 800px;
+}
+.home-offers{
+    height: 300px;
+    width: 300px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

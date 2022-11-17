@@ -1,0 +1,44 @@
+h1{
+    font-size: 40px;
+    font-weight: 400;
+}
+#socialbar{
+    width: 25px;
+    height: 200px;
+    font-size: 20px;
+    position: fixed;
+    top: 50%;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 10px;
+    right: 0%;
+
+}
+#submitBtn{
+    margin-left: 45%;
+}
+#home-well-wishes{
+    background-color: #FEAEB7;
+    height: 500px;
+}
+#home-well-wishes-2{
+    background-image: url(../../../assets/FTD_SplitBanner_Merx_1.png);
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+}
+#h2-wishes{
+    font-size: 28px;
+    margin-top: 200px;
+    font-weight: 400;
+    margin-left: 23%;
+}
+#btn-wishes{
+    font-size: 12px;
+    font-weight: 500;
+    padding: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: 30%;
+}
