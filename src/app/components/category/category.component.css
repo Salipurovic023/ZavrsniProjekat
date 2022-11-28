@@ -1,0 +1,10 @@
+.shop-product{
+    width: 350px;
+}
+.shop-options{
+    font-weight: 500;
+    font-size: 17px;
+}
+.shop-options-price{
+    font-style: italic;
+}

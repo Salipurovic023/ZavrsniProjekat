@@ -9,13 +9,13 @@
         </a>
         <ul class="navbar-nav ">
           <li class="nav-item">
-            <a class="nav-link mx-2 active" aria-current="page" href="#">Home</a>
+            <a class="nav-link mx-2 active" aria-current="page" routerLink="/">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link mx-2" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2" href="#">Shop</a>
+            <a class="nav-link mx-2" routerLink="shop">Shop</a>
           </li>
           <li class="nav-item">
             <a class="nav-link mx-2" href="#">Contact</a>
@@ -31,6 +31,9 @@
           <li class="nav-item">
             <a class="nav-link text-dark h4" href="#">
               <fa-icon style="font-size: 20px;" [icon]="faShoppingCart"></fa-icon>
+              <span class="position-absolute start-990 translate-middle bg-secondary border border-light rounded-circle cart">
+                <span class="text-white cart">1</span>
+              </span>
             </a>
           </li>
         </ul>

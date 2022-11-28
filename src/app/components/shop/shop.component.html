@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class=" col-3 text-center">
+            <span>Sympathy</span>
+            <br>
+            <a #sympathy [routerLink]="['/shop','Sympathy']"><img class="categories img-fluid" src="../../../assets/category/category1.png" alt="Sympathy"></a>
+        </div>
+        <div class=" col-3 text-center">
+            <span>Anniversary</span>
+            <br>
+            <a #anniversary [routerLink]="['/shop','Anniversary']"><img class="categories img-fluid" src="../../../assets/category/category2.png" alt="Anniversary"></a>
+        </div>
+        <div class=" col-3 text-center">
+            <span>Congratulations</span>
+            <br>
+            <a #congratulations [routerLink]="['/shop','Congratulations']"><img class="categories img-fluid" src="../../../assets/category/category3.png" alt="Congratulations"></a>
+        </div>
+        <div class=" col-3 text-center">
+            <span>Get Well</span>
+            <br>
+            <a #getwell [routerLink]="['/shop','Get-well']"><img class="categories img-fluid" src="../../../assets/category/category4.png" alt="Get-Well"></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
