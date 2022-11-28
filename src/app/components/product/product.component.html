@@ -1,0 +1,23 @@
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-12 text-center">
+    <span style="font-size: 16px;">Home/Shop/{{currentProduct.category}}/{{currentProduct.name}}</span>
+</div>
+<div class="col-md-6 col-12 text-end">
+    <button class="btn btn-outline-secondary">&#60; Prev</button>
+    <button class="btn btn-outline-secondary">Next &#62;</button>
+</div>
+<div class="col-lg-6 col-12 text-center">
+    <img id="productImg" src="{{currentProduct.imgSrc}}" alt="">
+</div>
+<div class="col-lg-6 col-12 text-start">
+    <h2 style="margin-bottom: 0px;">{{currentProduct.name}}</h2>
+    <h2 style="margin-bottom: 0px;">{{currentProduct.price}}$</h2>
+    <p>{{currentProduct.description}}</p>
+    <hr>
+    <span>Quantity</span><br>
+    <input type="number" class="form-control" style="width: 100px; border-radius:5%"><br>
+    <button onclick="addToCart()" class="btn btn-dark">Add to Cart</button>
+</div>
+</div>
+</div>

@@ -10,6 +10,10 @@ import { SocialSidebarComponent } from './components/social-sidebar/social-sideb
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ShopComponent } from './components/shop/shop.component';
+import { CategoryComponent } from './components/category/category.component';
+import { ProductComponent } from './components/product/product.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +21,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    SocialSidebarComponent
+    SocialSidebarComponent,
+    ShopComponent,
+    CategoryComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
