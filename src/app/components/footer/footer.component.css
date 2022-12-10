@@ -1,5 +1,5 @@
 .footer{
-    position:fixed;
-    right:50%;
+    position:relative;
     bottom: 0%;
+    background-color: white;
 }

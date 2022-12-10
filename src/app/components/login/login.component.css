@@ -1,0 +1,23 @@
+#backgroud{
+    background-image: url(../../../assets/loginBackground.jpg);
+    height: 90%;
+    width: 1150px;
+    background-position: center;
+}
+#loginForm{
+    position:relative;
+    width: 300px;
+    height: 400px;
+    top: 30%;
+    left: 36%;
+    text-align: center;
+}
+#loginBtn{
+    background-color: #ECF5F4;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}

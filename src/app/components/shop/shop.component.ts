@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Product } from 'src/app/models/Product';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { ProductsService } from 'src/app/services/products.service';
 export class ShopComponent implements OnInit {
 
   categories: string[];
+  selectedProducts: Product[] = []
 
   constructor(
     private _productService: ProductsService,

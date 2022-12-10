@@ -91,33 +91,45 @@
             <p>Payment Methods /</p>
         </div>
         <div class="col-lg-6 col-12">
-            <form>
+            <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
                 <div class="row mb-4">
                   <div class="col">
                     <div id="form-edit" class="form-outline">
-                      <input type="text" id="form3Example1" class="form-control" placeholder="Name" />
+                      <input type="text" id="name" class="form-control" placeholder="Name"
+                       ngModel name="name" required #name="ngModel"/>
+                       <span style="color:red;font-size:14px;" class="help-block" *ngIf="!name.valid && name.touched">
+                        Name must be filled.
+                    </span>
                     </div>
                   </div>
                   <div class="col">
                     <div id="form-edit" class="form-outline">
-                      <input type="text" id="form3Example2" class="form-control" placeholder="Email" />
+                      <input type="text" id="email" class="form-control" placeholder="Email"
+                       ngModel name="email" required email #email="ngModel"/>
+                       <span style="color:red;font-size:14px;" class="help-block" *ngIf="!email.valid && email.touched">
+                        E-mail must be valid.
+                    </span>
                     </div>
                   </div>
                 </div>
                 <div id="form-edit" class="form-outline mb-4">
-                  <input type="email" id="form3Example3" class="form-control" placeholder="Subject" />
+                  <input type="email" id="subject" class="form-control" placeholder="Subject"
+                   ngModel name="subject" #subject="ngModel" required />
+                  <span style="color:red;font-size:14px;" class="help-block" *ngIf="!subject.valid && subject.touched">
+                    Subject must be filled.
+                </span>
                 </div>
                 <div id="form-edit" class="form-outline">
                     <textarea style="resize: none;" class="form-control" id="textAreaExample" rows="3" placeholder="Message"></textarea>
                   </div>
                   <br>
-                <button id="submitBtn" type="submit" class="btn btn-outline-secondary">SEND</button>
+                <button id="submitBtn" type="submit" class="btn btn-outline-secondary" [disabled]="!myForm.valid">SEND</button>
             </form>
             <br><br>
             <p>Get our newsletters</p>
             <div class="d-inline">
                 <input type="text" readonly placeholder="Enter your email here" style="width: 300px; border:1px solid black;padding:7px">
-                <button type="submit" class="btn btn-dark p-2 ms-4">Subscribe Now</button>
+                <button type="submit" class="btn btn-dark p-1 ms-4">Subscribe Now</button>
             </div>
         </div>
     </div>
