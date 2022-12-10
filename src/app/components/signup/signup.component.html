@@ -1,0 +1,25 @@
+<div id="backgroud" class="container">
+    <div id="loginForm">
+        <br>
+        <h1 style="margin-bottom: 5px; font-weight: 400; font-size:28px;">Sign Up</h1>
+        <br>
+        <form style="text-align: left;" (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+            <label for="name">First Name</label>
+            <input minlength="5" type="text" id="name" name="name" class="form-control" ngModel required #name="ngModel">
+            <span style="color:red; font-size: 12px;" class="help-block" *ngIf="!name.valid && name.touched">Name is required.</span><br>
+            <label for="lastName">Last Name</label>
+            <input minlength="5" type="text" id="lastName" name="lastName" class="form-control" ngModel required #lastName="ngModel">
+            <span style="color:red; font-size: 12px;" class="help-block" *ngIf="!lastName.valid && lastName.touched">Surname is required.</span><br>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" class="form-control" ngModel required email #email="ngModel">
+            <span style="color:red; font-size: 12px;" class="help-block" *ngIf="!email.valid && email.touched">Email is required.</span><br>
+            <label for="password">Password</label>
+            <input minlength="5" type="password" id="password" name="password" class="form-control" ngModel required #password="ngModel">
+            <span style="color:red; font-size: 12px;" class="help-block" *ngIf="!password.valid && password.touched">Password is required.</span><br>
+            <br>
+            <a>Forgot password?</a><br>
+            <button id="loginBtn" class="btn" type="submit" [disabled]="!myForm.valid">Sign Up</button><br>
+            <p style="text-align: center;">Already a member?<a style="color: black;" routerLink="/login">Log In</a></p>
+        </form>
+    </div>
+</div>

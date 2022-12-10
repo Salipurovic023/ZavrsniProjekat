@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 me-5 d-flex justify-content-center mt-3">
+            <form id="orderForm" (ngSubmit)="confirmOrder(myForm)" #myForm="ngForm">
+                <div class="form-group mb-2">
+                    <label for="name">First Name<span style="color:red;">*</span>:</label>
+                    <input class="form-control" type="text" id="name" name="name" placeholder="Zorana"
+                     ngModel #name="ngModel" required> 
+                     <span style="color:red;font-size:14px;" class="help-block" *ngIf="!name.valid && name.touched">
+                        First Name must be filled.
+                    </span>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="surname">Last Name<span style="color:red;">*</span>:</label>
+                    <input class="form-control" type="text" id="surname" name="surname"
+                     ngModel #surname="ngModel" required>
+                     <span style="color:red;font-size:14px;" class="help-block" *ngIf="!surname.valid && surname.touched">
+                        Last Name must be filled.
+                    </span>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="email">Email address<span style="color:red;">*</span>:</label>
+                    <input class="form-control" type="email" id="email" name="email"
+                     ngModel #email="ngModel" email required>
+                     <span style="color:red;font-size:14px;" class="help-block" *ngIf="!email.valid && email.touched">
+                        Email must be valid.
+                    </span>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="phone">Phone Number<span style="color:red;">*</span>:</label>
+                    <input class="form-control" type="number" id="phone" name="phone"
+                     ngModel #phone="ngModel" required>
+                     <span style="color:red;font-size:14px;" class="help-block" *ngIf="!phone.valid && phone.touched">
+                        Phone number must be valid.
+                    </span>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="address">Address<span style="color:red;">*</span>:</label>
+                    <input class="form-control" type="text" id="address" name="address"
+                     ngModel #address="ngModel" required>
+                     <span style="color:red;font-size:14px;" class="help-block" *ngIf="!address.valid && address.touched">
+                        Address must be filled.
+                    </span>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="comment">Comment:</label>
+                    <textarea style="resize:none;" class="form-control" name="comment" id="comment" cols="30" rows="1"></textarea>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="payment">Payment method<span style="color:red;">*</span>:</label>
+                     <select class="form-control" id="payment" name="payment" #payment="ngModel" ngModel required>
+                        <option value="credit-card">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="payment-on-delivery">Payment on Delivery</option>
+                     </select>
+                     <span style="color:red;font-size:14px;" class="help-block" *ngIf="!payment.valid && payment.touched">
+                        Payment method must be chosen.
+                    </span>
+                </div>
+                <div class="form-group mb-2 d-flex justify-content-center">
+                    <button [disabled]="!myForm.valid" type="submit" class="btn btn-dark">Confirm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

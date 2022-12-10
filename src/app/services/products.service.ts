@@ -202,7 +202,7 @@ export class ProductsService {
         new Product(
             24,
             '/assets/category/congratulations/product24.PNG',
-            'CLASSIC WHITE CALLA LILY',
+            'Classic White Calla Lily',
             58,
             'Congratulations',
             'This houseplant is great for making every day bright. Whether perched on a windowsill or gifted to a friend in need of a smile, the pure white tones and healthy greenery add a delicate touch to any space. This plant loves rich soil and plenty of sun.'
@@ -210,7 +210,7 @@ export class ProductsService {
         new Product(
             25,
             '/assets/category/congratulations/product25.PNG',
-            'SPRING FLING TULIP BULB GARDEN',
+            'Spring Fling Tulip Bulb Garden',
             45,
             'Congratulations',
             'Grow a pop of color for the changing season with the Assorted Spring Tulip Garden blooming pink, yellow and purple flowers. Nothing revitalizes a space like fresh flowers. Packed with bold bell-shaped blooms, this bulb garden is the perfect gift for any occasion.'
@@ -218,7 +218,7 @@ export class ProductsService {
         new Product(
             26,
             '/assets/category/congratulations/product26.PNG',
-            'CONGRATS BELGIAN CHOCOLATE COVERED BERRY-GRAM',
+            'Congrats Belgian Chocolate Covered Berry-Gram',
             55,
             'Congratulations',
             'Artisan Crafted Belgian Chocolate Covered Treats Crafted in a Small Batch Kitchen 12 Strawberries Hand Dipped in Belgian Dark Chocolate Hand Decorated with drizzles and White Chocolate Letters spelling out \"\"CONGRATS\"\" Arrives in an Elegant Gift Box'
@@ -232,19 +232,18 @@ export class ProductsService {
     getProductsById(productId: number) {
         return this.allProducts.filter(function (x) { return x.id == productId });
     }
-    getNextProduct(productId: number) {
-        if (productId == 26) {
-            return this.allProducts[productId = 1];
+    getNextProduct(id: number) {
+        if (id == 26) {
+            return this.allProducts[id];
         }
-        return this.allProducts[productId + 1];
+        return this.allProducts[id];
 
     }
-    getPrevProduct(productId: number) {
-        if (productId == 1) {
-            return this.allProducts[productId = 26];
+    getPrevProduct(id: number) {
+        if (id == 1) {
+            return this.allProducts[id = 26];
         }
-        return this.allProducts[productId - 1];
-
+        return this.allProducts[id - 1];
     }
 
 }

@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row" *ngIf="!selectedProducts.length">
+        <div class="col-12 text-center mt-3">
+            <h1 style="font-size: 40px;">Shopping cart is empty.</h1>
+        </div>
+    </div>
+    <div class="row" *ngIf="selectedProducts.length">
+        <div class="col-12">
+            <table class="table table-responsive">
+                <tbody>
+                    <tr *ngFor="let cart of selectedProducts">
+                        <td colspan="3">
+                            <img style="width:150px; float: left;" [src]="cart.product.imgSrc">
+                            <p style="font-size:medium; margin-left: 2px;">{{cart.product.name}}</p><br>
+                            <span>Remove</span>
+                        </td>
+                        <td colspan="4">
+                            <span>{{cart.product.price}}$</span>
+                        </td>
+                        <td colspan="4">
+                            <input type="number" max="99" min="1" [value]="cart.quantity"
+                                (change)="quantityChange(cart.product.id, quant.value)" #quant>
+                        </td>
+                        <td colspan="4">
+                            <span>{{cart.product.price*cart.quantity}}$</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6 col-12">
+            <table class="table table-responsive table-sm">
+                <tfoot>
+                <tr>
+                    <td>Subtotal:</td>
+                    <td>{{subtotal}}$</td>
+                </tr>
+                <tr>
+                    <td>Shipping:</td>
+                    <td>{{shipping}}</td>
+                </tr>
+                    <tr>
+                        <td>Total:</td>
+                        <td>{{total}}$</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button (click)="checkout()" type="button" style="float:right;" class="btn btn-dark">Checkout</button>
+        </div>
+    </div>
+</div>

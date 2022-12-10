@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,7 +16,11 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(form:NgForm){
+    console.log(form);
+  }
+
   loadShop(){
-    this.router.navigate(['shop']);
+    this.router.navigate(['/shop','Sympathy']);
   }
 }

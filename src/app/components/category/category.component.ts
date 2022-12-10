@@ -12,16 +12,20 @@ import { Params } from '@angular/router';
 
 export class CategoryComponent implements OnInit {
 
-  selectedProducts:Product[] = []
-  currentProduct:Product
+  selectedProducts: Product[] = []
+  currentProduct: Product
   constructor(
-    private productService :ProductsService,
-    private route:ActivatedRoute
+    private productService: ProductsService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-     let category = this.route.snapshot.params['category'];
+    let category = this.route.snapshot.params['category'];
+    this.selectedProducts = this.productService.getProductsByCategory(category);
+    this.route.params.subscribe((params:Params)=>{
+      category = (params['category']);
       this.selectedProducts = this.productService.getProductsByCategory(category);
+    })
   }
 
 }
