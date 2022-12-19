@@ -13,7 +13,7 @@
             <span style="color:red; font-size: 12px;" class="help-block" *ngIf="!password.valid && password.touched">Password is required.</span><br>
             <br><br>
             <a>Forgot password?</a><br>
-            <button id="loginBtn" class="btn" type="submit" [disabled]="!myForm.valid">Log In</button>
+            <button (click)="logIn(email.value, password.value)" id="loginBtn" class="btn" type="submit" [disabled]="!myForm.valid">Log In</button>
         </form>
     </div>
 </div>

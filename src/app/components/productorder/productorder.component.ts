@@ -21,6 +21,7 @@ export class ProductorderComponent implements OnInit {
     console.log(myForm);
     this.router.navigate(['/']);
     this.shoppingService.cartChange.emit(0);
+    this.shoppingService.numberOfProducts = 0;
     this.shoppingService.cart = [];
   }
 }

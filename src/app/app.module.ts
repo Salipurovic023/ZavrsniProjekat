@@ -22,6 +22,12 @@ import { AboutComponent } from './components/about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryOrder } from './services/in-memory-order';
+import {AngularFireModule} from '@angular/fire/compat';
+import {AngularFireAuthModule} from '@angular/fire/compat/auth';
+import {AngularFireStorageModule} from '@angular/fire/compat/storage';
+import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
+import {AngularFireDatabaseModule} from '@angular/fire/compat/database';
+import { environment } from 'src/environments/environment';
 
 
 @NgModule({
@@ -49,7 +55,12 @@ import { InMemoryOrder } from './services/in-memory-order';
     FormsModule,
     HttpClientModule, HttpClientInMemoryWebApiModule.forRoot(
       InMemoryOrder,{dataEncapsulation:false}
-    )
+    ),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireStorageModule,
+    AngularFirestoreModule,
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

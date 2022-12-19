@@ -23,4 +23,8 @@ export class HomeComponent implements OnInit {
   loadShop(){
     this.router.navigate(['/shop','Sympathy']);
   }
+
+  shopGetWell(){
+    this.router.navigate(['/shop','Get-well'])
+  }
 }

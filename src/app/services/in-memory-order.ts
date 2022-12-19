@@ -3,9 +3,9 @@ import { Product } from "../models/Product";
 
 export class InMemoryOrder implements InMemoryDbService{
     createDb(){
-        const order: Product[]=[
+        const products: Product[]=[
 
         ];
-        return {order};
+        return {products};
     }
 }

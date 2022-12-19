@@ -232,18 +232,15 @@ export class ProductsService {
     getProductsById(productId: number) {
         return this.allProducts.filter(function (x) { return x.id == productId });
     }
-    getNextProduct(id: number) {
-        if (id == 26) {
-            return this.allProducts[id];
-        }
-        return this.allProducts[id];
 
-    }
-    getPrevProduct(id: number) {
-        if (id == 1) {
-            return this.allProducts[id = 26];
-        }
-        return this.allProducts[id - 1];
-    }
+    // getNextProduct(productId:number){
+    //     return this.allProducts.filter(function (x) {return x.id == productId + 1});
+    // }
+
+    // getPrevProduct(productId:number){
+    //     return this.allProducts.filter(function(x) {return x.id == productId - 1})
+    // }
+
+    
 
 }
