@@ -1,10 +1,12 @@
 <div class="container">
 <div class="row">
-<div class="col-md-6 col-12 text-center">
-    <span style="font-size: 16px;">Home/Shop/{{currentProduct.category}}/{{currentProduct.name}}</span>
+<div class="col-md-6 col-12 text-center mt-2">
+    <span style="font-size: 18px;">Home/Shop/{{currentProduct.category}}/{{currentProduct.name}}</span>
 </div>
-<div class="col-md-6 col-12 text-center">
+<div class="col-md-6 col-12 text-center mt-2">
+    <!-- Fali nextProduct metoda, pokusano ali ne radi -->
     <button type="button" class="btn btn-outline-secondary">&#60; Prev</button>
+    <!-- Fali prevProduct metoda, pokusano ali ne radi -->
     <button class="btn btn-outline-secondary">Next &#62;</button>
 </div>
 <div class="col-lg-6 col-12 text-center">
@@ -18,7 +20,7 @@
     <span>Quantity</span><br>
     <input type="number" name="quantity" id="quantity" class="form-control" 
     style="width: 100px; border-radius:5%" min="1" max="99" #quantity><br>
-    <button class="btn btn-dark" type="submit" (click)="addToCart(quantity.value)">Add to Cart</button>
+    <button class="btn btn-dark" type="submit" (click)="addToCart(quantity.value); quantity.value='';">Add to Cart</button>
 </div>
 </div>
 </div>

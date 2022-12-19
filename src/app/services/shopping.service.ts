@@ -1,4 +1,3 @@
-import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { EventEmitter, Injectable } from "@angular/core";
 import { Cart } from "../models/Cart";
 import { Product } from "../models/Product";
@@ -11,11 +10,8 @@ export class ShoppingService{
     cart:Cart[] = [];
     numberOfProducts:number = 0;
     cartChange: EventEmitter<any> = new EventEmitter();
-    headers = new HttpHeaders().set('Content-Type', 'application/json');
 
-    constructor(
-        private httpClient:HttpClient
-    ){}
+    constructor(){}
 
     addProductToCart(product:Product, quantity:number){
         this.cart.push(new Cart(product,quantity));
@@ -45,10 +41,4 @@ export class ShoppingService{
             }
         }
     }
-    addProductToDatabase(){
-        return this.httpClient.get('api/product',{
-            headers: this.headers
-        });
-    }
-
 }

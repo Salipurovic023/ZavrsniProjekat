@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import {faCircleUser} from '@fortawesome/free-solid-svg-icons';
 import{faSortDown} from '@fortawesome/free-solid-svg-icons';
+import { AuthService } from 'src/app/services/auth.service';
 import { ShoppingService } from 'src/app/services/shopping.service';
 
 @Component({
@@ -18,7 +19,8 @@ export class HeaderComponent implements OnInit {
   numberOfProducts = 0;
 
   constructor(
-    private shoppingService: ShoppingService
+    private shoppingService: ShoppingService,
+    public authService: AuthService
   ) { }
 
   ngOnInit(): void {
